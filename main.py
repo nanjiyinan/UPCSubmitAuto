@@ -8,7 +8,7 @@ signIn = {'username': os.environ["USERNAME"], #学号
           'password': os.environ["PASSWORD"]} #登陆密码
 
 headers = {
-    'User-Agent': 'Mozilla/5.0 (Linux; Android 10; M2002J9E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.120 Mobile Safari/537.36',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36',
 }
 
 conn = requests.Session()
@@ -64,7 +64,7 @@ print(saveJson['m'])
 
 def send_message(message):
     user = signIn['username']
-    SCKEY = "SCT9114THS8nJuPDCyPiSbpgtkEfokJT"
+    SCKEY = ""
     data = {"text": f"{user}的: {message}", "desp": ""}
     requests.post(f"https://sctapi.ftqq.com/{SCKEY}.send", data = data)
     
